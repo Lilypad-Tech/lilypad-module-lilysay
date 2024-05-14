@@ -4,6 +4,8 @@ This is a "hello world" style demo inspired by the classic [cowsay](https://en.w
 
 To run this demo you will need lilypad installed into your local development environment, check out the [docs to get started](https://lilypad.team/cli). 
 
+Once the lilypad CLI is installed, run the following to test out the lilysay module. 
+
 ```
 lilypad run github.com/lilypad-tech/lilypad-module-lilysay:0.1.0 -i Message='Hello lilypad world'
 ```

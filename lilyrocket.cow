@@ -7,7 +7,7 @@ $the_cow = <<EOC;
       $thoughts
 EOC
 $the_cow .= <<'EOC';
-                    .   ,- $thoughts
+                    .
                    .'.
                    |o|
                   .'o'.
@@ -33,6 +33,6 @@ $the_cow .= <<'EOC';
   \            `Y88888888P     /
    `.            d88888P'    ,'
      `.          888PP'    ,'
-       `-.      d8P'    ,-'   -CJ-
+       `-.      d8P'    ,-'  
           `-.,,_'__,,.-'
 EOC
