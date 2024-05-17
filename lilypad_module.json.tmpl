@@ -14,7 +14,7 @@
         "Entrypoint": [
           "/bin/sh",
           "-c",
-          "ln -sf /usr/share/cowsay/cows/${IMAGE:-default}.cow /usr/share/cowsay/cows/default.cow && /usr/games/cowsay \"$MESSAGE\""
+          "docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama && docker exec -it ollama ollama run llama3"
         ],
         "EnvironmentVariables": [
           {{ if .Image }}"{{ subst "IMAGE=%s" .Image }}",{{else}}"IMAGE=lilypad",{{ end }}

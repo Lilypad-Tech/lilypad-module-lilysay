@@ -4,6 +4,8 @@ This is a "hello world" style demo inspired by the classic [cowsay](https://en.w
 
 To run this demo you will need lilypad installed into your local development environment, check out the [docs to get started](https://lilypad.team/cli). 
 
+It's important to note the `Dockerfile` in this repository is only here for informational purposes only to see how the [lilysay dockerhub](https://hub.docker.com/repository/docker/lilypadnetwork/lilysay) image is built against the Lilypad template below. 
+
 Once the lilypad CLI is installed, run the following to test out the lilysay module. 
 
 ```
