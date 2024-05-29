@@ -18,7 +18,7 @@
         ],
         "EnvironmentVariables": [
           {{ if .Image }}"{{ subst "IMAGE=%s" .Image }}",{{else}}"IMAGE=lilypad",{{ end }}
-          {{ if .Message }}"{{ printf "MESSAGE=%s" (printf "%q" .Message) }}"{{ end }}
+          {{ if .Message }}"{{ subst "MESSAGE=%s" (printf "%s" (jsonEscape .Message)) }}"{{ else }}"MESSAGE='Hello World'"{{ end }}
         ],
         "Image": "lilypadnetwork/lilysay:0.0.6@sha256:9dea5ce25fce2cb0b53729b7aeabd139951a21356c63a11922a58b1d199050cd"
       },
