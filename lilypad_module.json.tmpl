@@ -13,7 +13,8 @@
       "Docker": {
         "Entrypoint": [
           "/bin/sh",
-          "-c"
+          "-c",
+          "ln -sf /usr/share/cowsay/cows/${IMAGE:-default}.cow /usr/share/cowsay/cows/default.cow && /usr/games/cowsay \"$MESSAGE\""
         ],
         "EnvironmentVariables": [
           {{ if .Image }}"{{ subst "IMAGE=%s" .Image }}",{{else}}"IMAGE=lilypad",{{ end }}
