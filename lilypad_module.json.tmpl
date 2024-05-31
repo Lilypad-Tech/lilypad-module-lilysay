@@ -14,13 +14,13 @@
         "Entrypoint": [
           "/bin/sh",
           "-c",
-          "docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama && docker exec -it ollama ollama run llama3"
+          "ln -sf /usr/share/cowsay/cows/${IMAGE:-default}.cow /usr/share/cowsay/cows/default.cow && /usr/games/cowsay \"$MESSAGE\""
         ],
         "EnvironmentVariables": [
           {{ if .Image }}"{{ subst "IMAGE=%s" .Image }}",{{else}}"IMAGE=lilypad",{{ end }}
           {{ if .Message }}"{{ subst "MESSAGE=%s" .Message }}"{{else}}"Message=Hello World"{{ end }}
         ],
-        "Image": "lilypadnetwork/lilysay:0.0.6@sha256:9dea5ce25fce2cb0b53729b7aeabd139951a21356c63a11922a58b1d199050cd"
+        "Image": "public.ecr.aws/k8m6l9n3/lilysay:latest@sha256:a8dc7aa48cb27af19d38c69b496c3c967e1d4fdee40e3b97d27b27cb87b40878"
       },
       "Engine": "Docker",
       "Network": {
