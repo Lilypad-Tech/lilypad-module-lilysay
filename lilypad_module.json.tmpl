@@ -20,7 +20,7 @@
           {{ if .Image }}"{{ subst "IMAGE=%s" .Image }}",{{else}}"IMAGE=lilypad",{{ end }}
           {{ if .Message }}"{{ subst "MESSAGE=%s" .Message }}"{{else}}"Message=Hello World"{{ end }}
         ],
-        "Image": "public.ecr.aws/k8m6l9n3/lilysay:latest@sha256:a8dc7aa48cb27af19d38c69b496c3c967e1d4fdee40e3b97d27b27cb87b40878"
+        "Image": "public.ecr.aws/lilypad-network/lilysay:latest@sha256:a8dc7aa48cb27af19d38c69b496c3c967e1d4fdee40e3b97d27b27cb87b40878"
       },
       "Engine": "Docker",
       "Network": {
